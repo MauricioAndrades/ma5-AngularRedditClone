@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc overview
- * @name yoRedditCloneSassApp
+ * @name RedditClone
  * @description
- * # yoRedditCloneSassApp
+ * # RedditClone
  *
  * Main module of the application.
  */
-angular.module('yoRedditCloneSassApp', [
+angular.module('RedditClone', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

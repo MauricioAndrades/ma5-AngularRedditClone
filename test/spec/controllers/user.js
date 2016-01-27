@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: UserCtrl', function () {
 
   // load the controller's module
   beforeEach(module('RedditClone'));
 
-  var MainCtrl,
+  var UserCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    UserCtrl = $controller('UserCtrl', {
       $scope: scope
     });
   }));

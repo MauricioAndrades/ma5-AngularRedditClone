@@ -1,12 +1,12 @@
 'use strict';
 /**
  * @ngdoc function
- * @name yoRedditCloneSassApp.controller:ChatCtrl
+ * @name RedditClone.controller:ChatCtrl
  * @description
  * # ChatCtrl
  * A demo of using AngularFire to manage a synchronized list.
  */
-angular.module('yoRedditCloneSassApp')
+angular.module('RedditClone')
   .controller('ChatCtrl', function ($scope, Ref, $firebaseArray, $timeout) {
     // synchronize a read-only, synchronized array of messages, limit to most recent 10
     $scope.messages = $firebaseArray(Ref.child('messages').limitToLast(10));
