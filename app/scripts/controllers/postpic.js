@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name RedditClone.controller:MainCtrl
+ * @name RedditClone.controller:PostpicCtrl
  * @description
- * # MainCtrl
+ * # PostpicCtrl
  * Controller of the RedditClone
  */
 angular.module('RedditClone')
-  .controller('MainCtrl', function ($scope) {
+  .controller('PostpicCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

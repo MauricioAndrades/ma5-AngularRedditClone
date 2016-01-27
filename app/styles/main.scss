@@ -3,6 +3,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -12,6 +13,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  margin: 70px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -88,4 +90,35 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+div[class="row"] {
+    border: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+div[class^="col-md"] {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+div[class^="container"] {
+  background-color: rgba(122,0,0, 0.2)
+}
+
+div {
+  boder: 3px dotted black;
+}
+
+#thebottomrow {
+  background-color: green;
+}
+
+@media print {
+  .container {
+    width: auto;
+  }
+}
+
+img {
+  height: 100%;
+  width: 100%;
 }

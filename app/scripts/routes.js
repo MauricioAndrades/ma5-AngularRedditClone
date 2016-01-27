@@ -1,7 +1,7 @@
 'use strict';
 /**
  * @ngdoc overview
- * @name yoRedditCloneSassApp:routes
+ * @name RedditClone:routes
  * @description
  * # routes.js
  *
@@ -27,7 +27,7 @@
  *   }
  *
  */
-angular.module('yoRedditCloneSassApp')
+angular.module('RedditClone')
 
 /**
  * Adds a special `whenAuthenticated` method onto $routeProvider. This special method,
@@ -62,18 +62,22 @@ angular.module('yoRedditCloneSassApp')
         controller: 'MainCtrl'
       })
 
-      .when('/chat', {
-        templateUrl: 'views/chat.html',
-        controller: 'ChatCtrl'
-      })
-      .when('/login', {
-        templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
-      })
-      .whenAuthenticated('/account', {
-        templateUrl: 'views/account.html',
-        controller: 'AccountCtrl'
-      })
+      // .when('/chat', {
+      //   templateUrl: 'views/chat.html',
+      //   controller: 'ChatCtrl'
+      // })
+      // .when('/login', {
+      //   templateUrl: 'views/login.html',
+      //   controller: 'LoginCtrl'
+      // })
+      // .whenAuthenticated('/account', {
+      //   templateUrl: 'views/account.html',
+      //   controller: 'AccountCtrl'
+      // })
+      // .when('/postpic', {
+      //   templateUrl: 'views/postpic.html',
+      //   controller: 'PostpicCtrl'
+      // })
       .otherwise({redirectTo: '/'});
   }])
 

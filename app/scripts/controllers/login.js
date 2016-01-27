@@ -1,12 +1,12 @@
 'use strict';
 /**
  * @ngdoc function
- * @name yoRedditCloneSassApp.controller:LoginCtrl
+ * @name RedditClone.controller:LoginCtrl
  * @description
  * # LoginCtrl
  * Manages authentication to any active providers.
  */
-angular.module('yoRedditCloneSassApp')
+angular.module('RedditClone')
   .controller('LoginCtrl', function ($scope, Auth, $location, $q, Ref, $timeout) {
     $scope.oauthLogin = function(provider) {
       $scope.err = null;
@@ -70,7 +70,7 @@ angular.module('yoRedditCloneSassApp')
       return f + str.substr(1);
     }
 
-  
+
 
     function redirect() {
       $location.path('/account');
