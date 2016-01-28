@@ -49,3 +49,4 @@ angular.module('RedditClone')
 
   // used by route security
   .constant('SECURED_ROUTES', {});
+
