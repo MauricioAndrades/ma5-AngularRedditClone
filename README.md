@@ -11,5 +11,11 @@ Run `grunt` for building and `grunt serve` for preview.
 
 Running `grunt test` will run the unit tests with karma.
 
+
+# Client Side Routing
 ## npm install -g superstatic
 
+https://www.npmjs.com/package/superstatic
+
+-install location provider
+-
