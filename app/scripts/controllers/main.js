@@ -1,19 +1,19 @@
 'use strict';
+
 angular.module('RedditClone').controller('MainCtrl', function($scope, $firebase, Posts) {
 
 	$scope.awesomeThings = ['HTML5 Boilerplate', 'AngularJS', 'Karma'];
 
-
 	/* scope for posting things*/
-	$scope.post = Posts;
+	$scope.posts = Posts;
 
 
 	/* save post function */
-	$scope.savePost = function() {
+	$scope.savePost = function(post) {
 
     if (post.name && post.title && post.url) {
 			/* add post to firebase */
-			Post.$add({
+			Posts.$add({
 		  	name: post.name,
 				body: post.body,
 				url: post.url,
@@ -21,9 +21,9 @@ angular.module('RedditClone').controller('MainCtrl', function($scope, $firebase,
 				// user: $scope.authData.github.username
 			});
 			/* reset values for next post */
-			post.name = "";
-			post.body = "";
-			post.url = "";
+			post.name = '';
+			post.body = '';
+			post.url = '';
 		} else {
 			// alert('please log in');
 		}
@@ -36,13 +36,13 @@ angular.module('RedditClone').controller('MainCtrl', function($scope, $firebase,
 		post.upvote++;
 		/*save it to firebase*/
 		Posts.$save(post);
-	}
+	};
 
 
 	/*user can delete an entry*/
 	$scope.deletePost = function(post) {
 		/*get the post*/
-		var dPost = new Firebase('FBURL' + post.$id);
+		var dPost = new firebase('FBURL' + post.$id);
 		/*delete it from firebase*/
 		dPost.remove();
 	}
@@ -53,8 +53,8 @@ angular.module('RedditClone').controller('MainCtrl', function($scope, $firebase,
 	$scope.addComment = function(post, comment) {
 		// important: finalize authdata
 		if ($scope.authData) {
-			var ref = new Firebase(FBURL + post.$id + '/comments');
-			var sync = $firebase(ref);
+			var commRef = new firebase(FBURL + post.$id + '/comments');
+			var sync = $firebase(commRef);
 			$scope.comments = sync.$asArray();
 			$scope.commends.$add({
 				user: $scope.authData.github.username,
@@ -65,15 +65,15 @@ angular.module('RedditClone').controller('MainCtrl', function($scope, $firebase,
 		}
 
 		/*reset the comment text before exiting function*/
-		comment.text = "";
+		comment.text = '';
 	}
 
 
 	$scope.deleteComment = function(post, comment) {
 		/*get the comment to delete*/
-		var curCom = new firebase(FBURL + post.$id + '/comments' + comment.$id);
+		var currentComm = new firebase(FBURL + post.$id + '/comments' + comment.$id);
 		/*remove comment*/
-		curCom.remove();
+		currentComm.remove();
 	}
 
 	// important finish auth login
