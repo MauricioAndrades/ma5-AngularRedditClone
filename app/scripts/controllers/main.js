@@ -10,10 +10,11 @@ angular.module('RedditClone').controller('MainCtrl', function($scope, $firebase,
 
 	/* save post function */
 	$scope.savePost = function() {
-		if (post.name && post.title && post.url) {
+
+    if (post.name && post.title && post.url) {
 			/* add post to firebase */
 			Post.$add({
-				name: post.name,
+		  	name: post.name,
 				body: post.body,
 				url: post.url,
 				votes: 0,
