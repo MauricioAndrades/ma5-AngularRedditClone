@@ -1,7 +1,12 @@
 'use strict';
-angular.module('RedditClone').controller('MainCtrl', function($scope, $firebase, Posts) {
 
-	$scope.awesomeThings = ['HTML5 Boilerplate', 'AngularJS', 'Karma'];
+	angular.module('RedditClone')
+	  .controller('MainCtrl', function ($scope, $firebase, Posts) {
+	    $scope.awesomeThings = [
+	      'HTML5 Boilerplate',
+	      'AngularJS',
+	      'Karma'
+	    ];
 
 
 	/* scope for posting things*/
