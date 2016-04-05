@@ -3,3 +3,6 @@ bower_components
 .sass-cache
 .tmp
 bower_components
+.gitattributes
+.npmignore
+.yo-rc.json
