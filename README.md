@@ -144,7 +144,7 @@ someModule.controller('MyController', MyController);
  SomeClass.prototype.doSomething = function(name) {
    this.greeter.greet(name);
  }
- 
+
  // example
  // Provide the wiring information in a module
  var myModule = angular.module('myModule', []);
@@ -152,7 +152,7 @@ someModule.controller('MyController', MyController);
 myModule.factory('greeter', function($window){
     return {
         greet: function(text) {
-            
+
         }
     }
 })

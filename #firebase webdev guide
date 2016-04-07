@@ -1,0 +1,6 @@
+#firebase webdev guide
+
+1. ref the Firebase db with:
+  new Firebase('url');
+
+  //
